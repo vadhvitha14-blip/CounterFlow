@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CounterFlow — Accessible communication. Shared understanding.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="top">
+  <a class="brand" href="#/" aria-label="CounterFlow home">
+    <svg width="38" height="38" viewBox="0 0 38 38" aria-hidden="true"><rect width="38" height="38" rx="9" fill="var(--flow)"/><path d="M7 14h14m0 0-4-4m4 4-4 4M31 24H17m0 0 4-4m-4 4 4 4" stroke="var(--on-flow)" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span><strong>CounterFlow</strong><small>Accessible communication. Shared understanding.</small></span>
+  </a>
+  <div class="tools" role="group" aria-label="Accessibility settings">
+    <button class="btn ghost" id="smaller" aria-label="Smaller text">A−</button>
+    <button class="btn ghost" id="larger" aria-label="Larger text">A+</button>
+    <button class="btn ghost" id="contrast" aria-pressed="false">High contrast</button>
+    <label class="chk"><input type="checkbox" id="speak"> Read aloud</label>
+    <label class="chk">Language
+      <select id="lang"><option value="en-IN">English (India)</option><option value="ta-IN">தமிழ்</option><option value="hi-IN">हिन्दी</option><option value="en-US">English (US)</option></select>
+    </label>
+  </div>
+  <div class="roles" role="group" aria-label="I am">
+    <span>I am</span>
+    <button class="btn role" data-role="user" aria-pressed="true">the visitor</button>
+    <button class="btn role" data-role="staff" aria-pressed="false">staff</button>
+  </div>
+</header>
+<main id="main" tabindex="-1"></main>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>
